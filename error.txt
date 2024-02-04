@@ -1,0 +1,24 @@
+(.venv) hardikfuria@Hardiks-MacBook-Pro rlad-attendance % ./platform-tools/adb start-server
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+
+(.venv) hardikfuria@Hardiks-MacBook-Pro rlad-attendance % ./platform-tools/adb devices
+List of devices attached
+ZY227JSNCM      device
+
+(.venv) hardikfuria@Hardiks-MacBook-Pro rlad-attendance % ./platform-tools/adb -s ZY227JSNCM install bin/rlad-0.1-arm64-v8a_armeabi-v7a-debug.apk
+Performing Streamed Install
+Success
+(.venv) hardikfuria@Hardiks-MacBook-Pro rlad-attendance % ./platform-tools/adb -s ZY227JSNCM logcat '*:S' 'python:D'       
+--------- beginning of crash
+--------- beginning of system
+--------- beginning of main
+02-04 18:11:06.199 30283 30313 I python  : Initializing Python for Android
+02-04 18:11:06.199 30283 30313 I python  : Setting additional env vars from p4a_env_vars.txt
+02-04 18:11:06.200 30283 30313 I python  : Changing directory to the one provided by ANDROID_ARGUMENT
+02-04 18:11:06.200 30283 30313 I python  : /data/user/0/org.test.rlad/files/app
+02-04 18:11:06.200 30283 30313 I python  : Preparing to initialize python
+02-04 18:11:06.201 30283 30313 I python  : _python_bundle dir exists
+02-04 18:11:06.201 30283 30313 I python  : calculated paths to be...
+02-04 18:11:06.201 30283 30313 I python  : /data/user/0/org.test.rlad/files/app/_python_bundle/stdlib.zip:/data/user/0/org.test.rlad/files/app/_python_bundle/modules
+02-04 18:11:06.211 30283 30313 I python  : set wchar paths...
